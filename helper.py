@@ -19,7 +19,7 @@ llm = ChatOpenAI(
     model="microsoft/mai-ds-r1:free",
     temperature=0.7,
     openai_api_base="https://openrouter.ai/api/v1",
-    openai_api_key="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" # Replace with your key
+    openai_api_key="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" # Replace with your key
 )
 
 
