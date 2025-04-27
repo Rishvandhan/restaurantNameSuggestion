@@ -21,8 +21,7 @@ llm = ChatOpenAI(
 )
 
 
-def generate_name_itemsuh(cuisine):
-    st.write(os.environ["OPENAI_API_KEY"])
+
 
 def generate_name_items(cuisine):
     prompt_template_name = PromptTemplate(
