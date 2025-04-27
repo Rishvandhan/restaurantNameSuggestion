@@ -10,15 +10,18 @@ import streamlit as st
 
 load_dotenv()
 
-os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
-os.environ["OPENAI_API_KEY"] =  os.getenv("OPENAI_API_KEY") or st.secrets["OPENAI_API_KEY"]
+# os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+# os.environ["OPENAI_API_KEY"] =  os.getenv("OPENAI_API_KEY") or st.secrets["OPENAI_API_KEY"]
 
 
 
 llm = ChatOpenAI(
     model="microsoft/mai-ds-r1:free",
-    temperature=0.7
+    temperature=0.7,
+    openai_api_base="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",
+    openai_api_key="your_actual_api_key"  # Replace with your key
 )
+
 
 
 
