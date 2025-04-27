@@ -30,7 +30,7 @@ if cuisine and cuisine != "Select a Cuisine":  # Check to avoid default state
 
     
     with st.spinner("Generating restaurant name and menu items... This website has been built with free resources, so free things take time in this world. Please wait for about a minute."):
-        response = helper.generate_name_items(cuisine)  # Call your helper function
+        response = helper.generate_name_itemsuh(cuisine)  # Call your helper function
     st.success("Done!")
     
     # Display restaurant name and menu items
