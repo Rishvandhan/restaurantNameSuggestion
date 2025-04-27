@@ -10,21 +10,24 @@ import streamlit as st
 
 load_dotenv()
 
-# os.environ["OPENAI_API_BASE"] = 
-# os.environ["OPENAI_API_KEY"] =  os.getenv("OPENAI_API_KEY") or st.secrets["OPENAI_API_KEY"]
 
+
+
+
+os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 
 llm = ChatOpenAI(
+    
     model="microsoft/mai-ds-r1:free",
     temperature=0.7,
-    openai_api_base="https://openrouter.ai/api/v1",
-    openai_api_key="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" # Replace with your key
 )
 
 
 
-
+def dummy():
+    return os.environ["OPENAI_API_KEY"]
 
 def generate_name_items(cuisine):
     prompt_template_name = PromptTemplate(

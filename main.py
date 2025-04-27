@@ -40,3 +40,4 @@ if cuisine and cuisine != "Select a Cuisine":  # Check to avoid default state
         st.write("-", item)
 else:
     st.write("Please select a cuisine from the dropdown menu.")
+    st.write(helper.dummy())
