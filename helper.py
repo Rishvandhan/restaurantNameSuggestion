@@ -15,7 +15,7 @@ load_dotenv()
 
 
 os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 llm = ChatOpenAI(
