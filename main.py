@@ -8,7 +8,11 @@ st.title("Restaurant Name Generator")
 # Sidebar cuisine selection
 # Add an image from a local file
 st.sidebar.image("Resources/logo.jpg", caption="Large Language Models", use_container_width=True)
-cuisine = st.sidebar.selectbox("Pick a Cuisine", ("Select a Cuisine", "Indian", "Italian", "Mexican", "Arabic", "American"))
+st.sidebar.write(
+    "Generate creative restaurant names and menu based on your selected cuisine! Powered by advanced Large language models."
+)
+st.sidebar.markdown("<h3 style='font-size: 1.5rem;'>Pick a Cuisine</h3>", unsafe_allow_html=True)
+cuisine = st.sidebar.selectbox("", ("Select a Cuisine", "Indian", "Italian", "Mexican", "Arabic", "American"))
 
 
 
@@ -41,6 +45,7 @@ if cuisine and cuisine != "Select a Cuisine":  # Check to avoid default state
     menu_items = response['menu_items'].split(",")
     for item in menu_items:
         st.write("-", item)
+    st.write("Powered by large language models!!")
 else:
     st.markdown("Swipe right or tap the arrow in the top-left corner to access the sidebar.")
     st.write("Please select a cuisine from the dropdown menu.")
