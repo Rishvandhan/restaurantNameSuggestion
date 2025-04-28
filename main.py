@@ -1,10 +1,7 @@
 import helper
 import streamlit as st
 
-st.set_page_config(
-    
-    initial_sidebar_state="expanded"
-)
+
 
 st.title("Restaurant Name Generator")
 
@@ -45,5 +42,9 @@ if cuisine and cuisine != "Select a Cuisine":  # Check to avoid default state
     for item in menu_items:
         st.write("-", item)
 else:
+    st.markdown("Swipe right or tap the arrow in the top-left corner to access the sidebar.")
     st.write("Please select a cuisine from the dropdown menu.")
-    st.write(helper.dummy())
+    
+    st.image("Resources/outdoor.jpg", caption="Your dream restaurant awaits", use_container_width=True)
+    st.write("Powered by large language models!!")
+    
