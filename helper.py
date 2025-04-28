@@ -16,7 +16,7 @@ load_dotenv()
 config = toml.load(".streamlit/secrets.toml")
 
 os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
-os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["api_key"]
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY") or st.secrets["secrets"]["api_key"]
 
 
 
