@@ -7,15 +7,17 @@ from langchain.chains import SequentialChain
 from dotenv import load_dotenv
 import os
 import streamlit as st
+import toml
 
 load_dotenv()
 
 
 
-
+config = toml.load(".streamlit\secrets.toml")
 
 os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = config["secrets"]["OPENAI_API_KEY"]
+
 
 
 llm = ChatOpenAI(
